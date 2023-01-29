@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Driving Game</title>
+    <style>
+       *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+      
+        .startaScreen{
+        display:flex;
+        justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         height:100vh;
+         background-color: black;
+         color: white;
+         
+     }
+     .hide{
+            display: none !important;
+        }
+     .top-bar{
+        display:flex;
+        justify-content: space-between;
+         align-items: center;
+         background-color: black;
+         color: white;
+         padding: 20px;
+     }
+    .top-bar .leaderboard{
+        background-color: white;
+        color: black;
+        padding: 5px;
+        border-radius: 5px;
+        
+    }
+    .top-bar .leaderboard a{
+       text-decoration: none;
+       color:red; 
+    }
+      .car {
+        position: absolute;
+        bottom: 100px;
+        margin: auto;
+        width: 50px;
+        height: 100px;
+        background-color: black;
+        background-image: url(car.png);
+        background-size: cover;
+        border-radius: 15px;
+      }
+      .enemy {
+        position: absolute;
+        bottom: 100px;
+        margin: auto;
+        width: 50px;
+        height: 100px;
+        background-color: white;
+        background-image: url(car.png);
+        background-size: cover;
+      }
+      .gameArea {
+        background-color: black;
+        width: 400px;
+        height: 700px;
+        overflow: hidden;
+        position: absolute;
+        margin: auto;
+        left: 35%;
+        align-items: center;
+      }
+      .line {
+        position: absolute;
+        height: 100px;
+        width: 10px;
+        margin-left: 195px;
+        background-color: white;
+      }
+      /* .score {
+        background-color: black;
+        height: 70px;
+        text-align: center;
+        color: white;
+        font-size: 1.5em;
+        font-family: fantasy;
+      } */
+      .startScreen {
+        text-align: center;
+        border: 1px solid white;
+        padding: 15px;
+        width: 100vh;
+        margin: auto;
+        width: 100wh;
+        color: red;
+        background-color: black;
+        border-radius: 30px;
+         
+      }
+    </style>
+  </head>
+  <body>
+
+    
+        
+         
+
+    <div class="top-bar">
+        <div class="user-name">abhishek</div>
+        <div class="score"> score</div>
+         <div class="lives">highest score: 5000</div>
+         <div class="leaderboard">
+            <a href="#">LeaderBoard</a>
+         </div>
+      </div>
+    <!-- start screen -->
+      <div class="startaScreen ">
+        <h1>welcome to game screen</h1>
+        <p>click any where to start the game</p>
+      </div>
+       
+
+    <!-- <div class="score"></div> -->
+    <div class="game">
+      <div class="startScreen">
+        Press here to Start<br /> Press Arrow keys to move the car<br />If you hit a another
+        car you will lose.
+      </div>
+      <div class="gameArea"></div>
+    </div>
+    <script src="./car.js"></script>
+  </body>
+</html>
